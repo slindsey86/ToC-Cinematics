@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "@pixi/app": "^6.5.1",
+    "@pixi/constants": "^6.5.1",
+    "@pixi/core": "^6.5.1",
+    "@pixi/display": "^6.5.1",
+    "@pixi/interaction": "^6.5.1",
+    "@pixi/loaders": "^6.5.1",
+    "@pixi/sprite": "^6.5.1",
+    "@pixi/spritesheet": "^6.5.1",
+    "@pixi/text": "^6.5.1",
+    "@pixi/ticker": "^6.5.1",
+    "gsap": "^3.10.4",
+    "pixi": "^0.3.1"
+  }
+}
