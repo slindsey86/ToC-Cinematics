@@ -11,7 +11,7 @@ import { dynamicSpecialEffectFunctions } from "./cinematic-factory/cinematics/ut
 import { asset_encounter_stranger } from './cinematic-factory/cinematics/asset_encounter_stranger';
 
 export const context = boot();
-PixiPlugin.registerPIXI({ DisplayObject });
+/*PixiPlugin.registerPIXI({ DisplayObject });
 gsap.registerPlugin(PixiPlugin);
 
 export async function playCinematic(
@@ -30,17 +30,17 @@ export async function playCinematic(
   context.app.stage.addChild(cinematic);
 
   await cinematic.play();
-}
+}*/
 
-export async function testNPCEncounterCinematic_MysteriousStranger() {
+/*export async function testNPCEncounterCinematic_MysteriousStranger() {
   return await playCinematic(asset_encounter_stranger, NPCEncounterCinematic_MysteriousStranger);
-}
+}*/
 
 async function main() {
-  boot();
+  //boot();
   console.log("booted")
   console.log("trying")
-  await playCinematic(asset_encounter_stranger, NPCEncounterCinematic_MysteriousStranger);
+  //await playCinematic(asset_encounter_stranger, NPCEncounterCinematic_MysteriousStranger);
 }
 
-main().catch(console.error);
+main();
