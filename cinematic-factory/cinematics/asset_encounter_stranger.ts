@@ -15,7 +15,7 @@ export const asset_encounter_stranger: NPCEncounterCinematicData = {
     angle: -12,
   },
   background: {
-    texture: "../../assets/images-webp/cinematics/timeline-vortex.webp",
+    texture: "assets/images-webp/cinematics/timeline-vortex.webp",
     x: 960,
     y: 540,
     scale: 1.5,
@@ -125,8 +125,8 @@ export const asset_encounter_stranger: NPCEncounterCinematicData = {
     },
   ],
   assets: {
-    __atlas_common: "../../assets/atlases-webp/atlas-npc-encounters-mysterious-stranger.json",
-    npcEncounterBackdrop_MysteriousStranger: "../../assets/images-webp/cinematics/timeline-vortex.webp",
+    __atlas_common: "assets/atlases-webp/atlas-npc-encounters-mysterious-stranger.json",
+    npcEncounterBackdrop_MysteriousStranger: "assets/images-webp/cinematics/timeline-vortex.webp",
     music: "assets/audio/music/npc-stranger.mp3",
   },
 };
