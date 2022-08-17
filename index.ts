@@ -44,8 +44,10 @@ export async function testNPCEncounterCinematic_MysteriousStranger() {
 }
 
 async function main() {
+  document.body.appendChild(context.app.view);
+  console.log("booted")
   console.log("trying")
-  testNPCEncounterCinematic_MysteriousStranger();
+  await playCinematic(asset_encounter_stranger, NPCEncounterCinematic_MysteriousStranger);
 }
 
-main().catch(console.error);
+await main().catch(console.error);

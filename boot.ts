@@ -45,8 +45,6 @@ export function boot(applicationOptions: Partial<IApplicationOptions> = {}) {
   ticker.add(() => app.render());
   ticker.start();
 
-  document.body.appendChild(app.view);
-console.log("booted")
   return uninitializedContext;
 }
 
