@@ -1,4 +1,3 @@
-
 import { Renderer } from '@pixi/core';
 import { Application, IApplicationOptions } from '@pixi/app';
 import "@pixi/events";
@@ -42,8 +41,6 @@ export function boot(applicationOptions: Partial<IApplicationOptions> = {}) {
   
   return uninitializedContext;
 }
-
-
 
 export type UninitializedGameContext = ReturnType<typeof boot>;
 

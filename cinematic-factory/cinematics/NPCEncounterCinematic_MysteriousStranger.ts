@@ -5,10 +5,12 @@ import { Sprite } from "@pixi/sprite";
 import { NPCEncounterCinematic } from "./NPCEncounterCinematic";
 import { NPCEncounterReward } from "./NPCEncounterReward";
 
+
 export class NPCEncounterCinematic_MysteriousStranger extends NPCEncounterCinematic {
   private vortexTween!: any;
 
   async playIntroAnimation() {
+
     const { app,  ticker } = this.context;
 
   }
@@ -44,6 +46,7 @@ export class NPCEncounterCinematic_MysteriousStranger extends NPCEncounterCinema
      * A bit of suspense
      */
     await ticker.delay(0.3);
+
   
     try {
       /**
@@ -55,18 +58,17 @@ export class NPCEncounterCinematic_MysteriousStranger extends NPCEncounterCinema
        *
        * spinner.showDuring() shows the loading spinner while the given async function is running.
        */
+
       const textures = await this.enchantments.waitUntil.orThrowError(() => this.textures || this.texturesError)
-       
+      
       await this.playIntroAnimation();
 
       await ticker.delay(0.1);
 
-      await ticker.delay(0.9);
-
-      await ticker.delay(0.1);
-
       // ,,, add the vortex effect
-      const vortex = this.addCinematicBackdrop(textures[this.data.background.texture]);
+      const vortex = this.addCinematicBackdrop(
+        textures[this.data.background.texture]
+      );
       vortex.position.copyFrom(this.data.background);
       vortex.scale.set(this.data.background.scale);
 
@@ -76,7 +78,7 @@ export class NPCEncounterCinematic_MysteriousStranger extends NPCEncounterCinema
         this.tweeener.from(vortex, {
           pixi: { scale: vortex.scale.x * 1.2, alpha: 0 },
           duration: 0.7,
-          overwrite: "auto",
+          overwrite: 'auto',
         }),
       ]);
 
@@ -84,7 +86,7 @@ export class NPCEncounterCinematic_MysteriousStranger extends NPCEncounterCinema
 
     /*  const showRewardsModal = async () => {
         const { modal, promise } =
-          reward.type === "TOCIUM"
+          reward.type === 'TOCIUM'
             ? this.context.modals.strangerReward_Tocium(reward)
             : this.context.modals.strangerReward_CenturyVial(reward.amount);
 
@@ -94,7 +96,10 @@ export class NPCEncounterCinematic_MysteriousStranger extends NPCEncounterCinema
          */
       /*  this.slideshowViewContainer.addChildAt(modal, 1);
         modal.scale.set(1.15);
-        modal.position.set(this.slideshowViewBounds.width / 2, this.slideshowViewBounds.height / 2);
+        modal.position.set(
+          this.slideshowViewBounds.width / 2,
+          this.slideshowViewBounds.height / 2
+        );
 
         await promise;
 
@@ -106,15 +111,17 @@ export class NPCEncounterCinematic_MysteriousStranger extends NPCEncounterCinema
       await this.tweeener.to(vortex, {
         pixi: { scale: vortex.scale.x * 1.05, alpha: 0 },
         duration: 0.7,
-        ease: "power.in",
-        overwrite: "auto",
+        ease: 'power.in',
+        overwrite: 'auto',
         onComplete: () => {
           this.vortexTween.kill();
           vortex.destroy();
         },
       });
     } catch (error) {
+
       throw new Error(error + "  : Failed to play NPC Encounter.");
+
     } finally {
       await dimmer.hide();
 
@@ -132,7 +139,7 @@ export class NPCEncounterCinematic_MysteriousStranger extends NPCEncounterCinema
       rotation: -6.28319,
       repeat: -1,
       duration: 100,
-      ease: "none",
+      ease: 'none',
     });
     return sprite;
   }
