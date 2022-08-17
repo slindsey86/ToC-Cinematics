@@ -2,15 +2,8 @@
 import { Renderer } from '@pixi/core';
 import { Application, IApplicationOptions } from '@pixi/app';
 import "@pixi/events";
-import { InteractionManager } from '@pixi/interaction';
-Renderer.registerPlugin('interaction', InteractionManager);
-import { BatchRenderer } from '@pixi/core';
-Renderer.registerPlugin('batch', BatchRenderer);
-import { AppLoaderPlugin } from '@pixi/loaders';
-Application.registerPlugin(AppLoaderPlugin);
 import { Loader } from '@pixi/loaders';
 import { SpritesheetLoader } from '@pixi/spritesheet';
-Loader.registerPlugin(SpritesheetLoader);
 import { createTicker } from "./ticker";
 import '@pixi/math-extras';
 import { AssetsManager } from './assets-manager';

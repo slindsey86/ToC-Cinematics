@@ -1,15 +1,15 @@
-import { GameSingletons } from "@game/app/GameSingletons";
-import { tweenTintProperty } from "@game/asorted/animations/tweenTintProperty";
-import { NPCEncounterCinematicSlideUserChoiceOptionData } from "@game/cinematics/types/NPCEncounterCinematicData";
-import { FontFamily } from "@game/constants/FontFamily";
-import { ThemeColors } from "@game/constants/ThemeColors";
+import { tweenTintProperty } from "../../../tweenTintProperty";
+import { NPCEncounterCinematicSlideUserChoiceOptionData } from "../types/NPCEncounterCinematicData";
+import { FontFamily } from "../../../FontFamily";
 import { Container } from "@pixi/display";
 import { Point } from "@pixi/math";
 import { Sprite } from "@pixi/sprite";
 import { Text } from "@pixi/text";
-import { buttonizeDisplayObject } from "@sdk-pixi/ui-helpers/buttonizeDisplayObject";
-import { TemporaryTweeener } from "@sdk/pixi/animations/TemporaryTweener";
-import { lerp } from "@sdk/utils/math";
+import { buttonizeDisplayObject } from "./buttonizeDisplayObject";
+import { TemporaryTweeener } from "../../../TemporaryTweener";
+import { lerp } from "../../..//math";
+import { context } from "../../..";
+import { ThemeColors } from "../../../ThemeColors";
 
 const bubblesLinePointA = new Point(950, -285);
 const bubblesLinePointB = new Point(730, 530);
@@ -45,7 +45,7 @@ export function presentUserDialogueChoiceOptions(
 }
 
 class UserChoiceBubble extends Container {
-  private readonly assets = GameSingletons.getResources();
+  private readonly assets = context.assets
 
   private readonly bubbleText;
   private readonly bubble;

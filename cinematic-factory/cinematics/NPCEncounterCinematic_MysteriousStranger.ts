@@ -1,9 +1,7 @@
-import { MusicSource } from "@game/constants/paths/MusicSource";
-import { TilingSpriteDimmer, TilingSpriteDimmerTemplates } from "@game/ui/common/TilingSpriteDimmer";
+//import { MusicSource } from "@game/constants/paths/MusicSource";
+import { TilingSpriteDimmer, TilingSpriteDimmerTemplates } from "../../TilingSpriteDimmer";
 import { Texture } from "@pixi/core";
 import { Sprite } from "@pixi/sprite";
-import { CallbackList } from "@sdk/utils/callbacks/CallbackList";
-import { applyPreNPCEncounterScreenEffect, npcEncoutnerScreenEffects } from "./applyPreNPCEncounterScreenEffect";
 import { NPCEncounterCinematic } from "./NPCEncounterCinematic";
 import { NPCEncounterReward } from "./NPCEncounterReward";
 
@@ -11,18 +9,12 @@ export class NPCEncounterCinematic_MysteriousStranger extends NPCEncounterCinema
   private vortexTween!: any;
 
   async playIntroAnimation() {
-    const { app, world, ticker } = this.context;
+    const { app,  ticker } = this.context;
 
-    await npcEncoutnerScreenEffects.applyFastGlitch(world, 0.033);
-    await ticker.delay(0.8);
-    await npcEncoutnerScreenEffects.applyFastGlitch(world, 0.15);
-    await ticker.delay(0.8);
   }
 
   async play(reward: NPCEncounterReward) {
-    const { app, main, ticker, contracts, spinner, music } = this.context;
-
-    const cleanUpCallbacks = new CallbackList();
+    const { app,ticker } = this.context;
 
     /**
      * Even though on construction the dimmer's alpha is zero,
@@ -47,16 +39,12 @@ export class NPCEncounterCinematic_MysteriousStranger extends NPCEncounterCinema
       this.loadAssets();
     }
 
-    const stopSilence = music.playSilence();
 
     /**
      * A bit of suspense
      */
     await ticker.delay(0.3);
-
-    const stopHidingTheCogWheelMenu = main.hud.reasonsToHideCogWheelMenu.add("OngoingNPCCinematic");
-    cleanUpCallbacks.push(stopHidingTheCogWheelMenu);
-
+  
     try {
       /**
        * Now is the time to make sure we've loaded all assets
@@ -67,23 +55,13 @@ export class NPCEncounterCinematic_MysteriousStranger extends NPCEncounterCinema
        *
        * spinner.showDuring() shows the loading spinner while the given async function is running.
        */
-      const textures = await spinner.showDuring(
-        this.enchantments.waitUntil.orThrowError(() => this.textures || this.texturesError),
-        `Loading textures for NPC encounter cinematic...`
-      );
-
-      const characterMusicTrack = music.playTrack(MusicSource.NPCEncounterStranger, true);
-      cleanUpCallbacks.push(characterMusicTrack.stop);
-
+      const textures = await this.enchantments.waitUntil.orThrowError(() => this.textures || this.texturesError)
+       
       await this.playIntroAnimation();
 
       await ticker.delay(0.1);
 
       await ticker.delay(0.9);
-
-      const flashes = this.addFlashQuad();
-      await applyPreNPCEncounterScreenEffect(app.stage);
-      flashes.destroy();
 
       await ticker.delay(0.1);
 
@@ -104,7 +82,7 @@ export class NPCEncounterCinematic_MysteriousStranger extends NPCEncounterCinema
 
       await ticker.delay(0.3);
 
-      const showRewardsModal = async () => {
+    /*  const showRewardsModal = async () => {
         const { modal, promise } =
           reward.type === "TOCIUM"
             ? this.context.modals.strangerReward_Tocium(reward)
@@ -114,15 +92,15 @@ export class NPCEncounterCinematic_MysteriousStranger extends NPCEncounterCinema
          * By default the modal will already be a child of context.stageContainers._modals,
          * but we want to slip it in between the character and the backdrop.
          */
-        this.slideshowViewContainer.addChildAt(modal, 1);
+      /*  this.slideshowViewContainer.addChildAt(modal, 1);
         modal.scale.set(1.15);
         modal.position.set(this.slideshowViewBounds.width / 2, this.slideshowViewBounds.height / 2);
 
         await promise;
 
         await this.claimRewards();
-      };
-      await this.playStorySlides(this.data, showRewardsModal);
+      };*/
+      await this.playStorySlides(this.data);
 
       // ... remove the vortex effect
       await this.tweeener.to(vortex, {
@@ -136,32 +114,14 @@ export class NPCEncounterCinematic_MysteriousStranger extends NPCEncounterCinema
         },
       });
     } catch (error) {
-      await this.context.modals.warning("" + error, "Failed to play NPC Encounter.");
+      throw new Error(error + "  : Failed to play NPC Encounter.");
     } finally {
       await dimmer.hide();
 
-      cleanUpCallbacks.reverseCallAllAndClear();
-
       await this.letterBox.playHideAnimation();
-
-      stopSilence();
 
       this.destroy();
     }
-  }
-
-  addFlashQuad() {
-    const MAX_ALPHA = 0.23456789;
-    const lightning = this.addChildAt(new Sprite(Texture.WHITE), 0);
-    this.context.utils.makeScreenLayer(lightning, null);
-    lightning.alpha = 0;
-
-    this.context.utils.overrideRenderMethod(lightning, () => {
-      const rand = Math.random();
-      lightning.alpha = MAX_ALPHA * rand * rand * rand * rand;
-    });
-
-    return lightning;
   }
 
   addCinematicBackdrop(bgTexture: Texture): Sprite {

@@ -39,15 +39,30 @@
   resolved "https://registry.yarnpkg.com/@pixi/loaders/-/loaders-6.5.1.tgz#148e2d7e5b30bd81dab4941a857a01b92c5aa65e"
   integrity sha512-3a41RWFWyRtBrs/fboaFHLF7H5uof4XaWqMCxvLzfofHiz2AuiZnAx9YJAjT+RCP2uFfoU1XmDcyGdc1Q0Ib4w==
 
+"@pixi/math-extras@^6.5.1":
+  version "6.5.1"
+  resolved "https://registry.yarnpkg.com/@pixi/math-extras/-/math-extras-6.5.1.tgz#3c39081a194f56a9eeb614d193c46b47643160e1"
+  integrity sha512-PgzUKth1PGNK1doYCu9gR6G18dYwSFrG1i1y1+q2AVK9iWb59LqpcFf7Dq24jjGDAS5l9EGkpChvXr8K9WBvbw==
+
 "@pixi/math@^6.5.1":
   version "6.5.1"
   resolved "https://registry.yarnpkg.com/@pixi/math/-/math-6.5.1.tgz#16213190e19400a77067442406e0e5ef206c3cd7"
   integrity sha512-r5N18EBxEO4ZdeQ6e3T00Qe9YXOG1vto0fgAT4jHwxBfBn0LrY8FIiF6yi6r8af2hU6LrzNdE2nO+0kYPzR5Lw==
 
+"@pixi/mesh-extras@^6.5.1":
+  version "6.5.1"
+  resolved "https://registry.yarnpkg.com/@pixi/mesh-extras/-/mesh-extras-6.5.1.tgz#c5a14e4075f2d4db103f4a5beb4f3eebf0812929"
+  integrity sha512-Q7Zl1emYr16ZRpAKJKSnGe4AdAwj1mAG3lS5cu2rxSyTQypiFzdC6TnU4XZlGAPE7V+hvlPmSjOwhIzVXgTJ4Q==
+
 "@pixi/sprite-animated@^6.5.1":
   version "6.5.1"
   resolved "https://registry.yarnpkg.com/@pixi/sprite-animated/-/sprite-animated-6.5.1.tgz#486841644d0281d69a99a1d132c40a2caea8b9fb"
   integrity sha512-roaU01nSQtHx7302/7gueOooSsAsiSq2QVzd06SCSBIiGAg5GY5amEhkS9YHp+o97c3irimPgdcGS5/CBkSFtg==
+
+"@pixi/sprite-tiling@^6.5.1":
+  version "6.5.1"
+  resolved "https://registry.yarnpkg.com/@pixi/sprite-tiling/-/sprite-tiling-6.5.1.tgz#033aa900fa27e6198d71f48291b7aa76664e9119"
+  integrity sha512-ZnABiAv1Ss+wq/kX03DZNDNnBOn18gcOmJY/yzOwLgESvs9FWT3nEQA3ntK36uHDhqBFkzcPuAxkCPDHuIsceA==
 
 "@pixi/sprite@^6.5.1":
   version "6.5.1"

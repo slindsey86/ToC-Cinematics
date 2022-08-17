@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\mindw\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add eventemmitter3
+  C:\Program Files\nodejs\node.exe C:\Users\mindw\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add @pixi/tiling-sprite
 
 PATH: 
   C:\Python310\Scripts\;C:\Python310\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Oculus\Support\oculus-runtime;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Filestar;C:\Program Files (x86)\Calibre2\;C:\Program Files\dotnet\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\Git LFS;C:\Program Files\PuTTY\;C:\Users\mindw\AppData\Local\Microsoft\WindowsApps;C:\Users\mindw\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\mindw\AppData\Roaming\npm;C:\Users\mindw\AppData\Local\Programs\mongosh\;C:\Program Files\heroku\bin;C:\Program Files\git\bin;C:\Program Files\git\cmd;C:\Program Files (x86)\GitHub CLI\;C:\Users\mindw\AppData\Local\GitHubDesktop\bin;C:\Program Files (x86)\BrowserStackLocal\
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/eventemmitter3: Not found
+  Error: https://registry.yarnpkg.com/@pixi%2ftiling-sprite: Not found
       at Request.params.callback [as _callback] (C:\Users\mindw\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:67029:18)
       at Request.self.callback (C:\Users\mindw\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140883:22)
       at Request.emit (events.js:400:28)
@@ -33,12 +33,18 @@ npm manifest:
       "@pixi/constants": "^6.5.1",
       "@pixi/core": "^6.5.1",
       "@pixi/display": "^6.5.1",
+      "@pixi/graphics": "^6.5.1",
       "@pixi/interaction": "^6.5.1",
       "@pixi/loaders": "^6.5.1",
+      "@pixi/math": "^6.5.1",
+      "@pixi/mesh-extras": "^6.5.1",
       "@pixi/sprite": "^6.5.1",
+      "@pixi/sprite-animated": "^6.5.1",
       "@pixi/spritesheet": "^6.5.1",
       "@pixi/text": "^6.5.1",
       "@pixi/ticker": "^6.5.1",
+      "@pixi/utils": "^6.5.1",
+      "eventemitter3": "^4.0.7",
       "gsap": "^3.10.4",
       "pixi": "^0.3.1",
       "type-fest": "^2.18.0"
@@ -75,6 +81,11 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/@pixi/display/-/display-6.5.1.tgz#5e21a794008a0d2359fbee784b2e8a6baa7e1c43"
     integrity sha512-2NzEEaqdKHNpLwJxOsVq1VIYozNGfq4RCLEiXN90CVIp8021i6Fzr0JoVx16Eio3rSBXk9xMmSdw3esEtf8Bmw==
   
+  "@pixi/graphics@^6.5.1":
+    version "6.5.1"
+    resolved "https://registry.yarnpkg.com/@pixi/graphics/-/graphics-6.5.1.tgz#6b1d783c36333358e18ddab3017a554380b8b1bf"
+    integrity sha512-LeFdpmbWHZWH8ub7AqF3sKDbSvlYoGDa8029vcPJpgwDE7hrCTRX0Lgbr+xkgPu99jZKJrW4pbRTr+QGckkH1Q==
+  
   "@pixi/interaction@^6.5.1":
     version "6.5.1"
     resolved "https://registry.yarnpkg.com/@pixi/interaction/-/interaction-6.5.1.tgz#ba28d61144aa88b88dbb36238cabdf59b03fa201"
@@ -84,6 +95,21 @@ Lockfile:
     version "6.5.1"
     resolved "https://registry.yarnpkg.com/@pixi/loaders/-/loaders-6.5.1.tgz#148e2d7e5b30bd81dab4941a857a01b92c5aa65e"
     integrity sha512-3a41RWFWyRtBrs/fboaFHLF7H5uof4XaWqMCxvLzfofHiz2AuiZnAx9YJAjT+RCP2uFfoU1XmDcyGdc1Q0Ib4w==
+  
+  "@pixi/math@^6.5.1":
+    version "6.5.1"
+    resolved "https://registry.yarnpkg.com/@pixi/math/-/math-6.5.1.tgz#16213190e19400a77067442406e0e5ef206c3cd7"
+    integrity sha512-r5N18EBxEO4ZdeQ6e3T00Qe9YXOG1vto0fgAT4jHwxBfBn0LrY8FIiF6yi6r8af2hU6LrzNdE2nO+0kYPzR5Lw==
+  
+  "@pixi/mesh-extras@^6.5.1":
+    version "6.5.1"
+    resolved "https://registry.yarnpkg.com/@pixi/mesh-extras/-/mesh-extras-6.5.1.tgz#c5a14e4075f2d4db103f4a5beb4f3eebf0812929"
+    integrity sha512-Q7Zl1emYr16ZRpAKJKSnGe4AdAwj1mAG3lS5cu2rxSyTQypiFzdC6TnU4XZlGAPE7V+hvlPmSjOwhIzVXgTJ4Q==
+  
+  "@pixi/sprite-animated@^6.5.1":
+    version "6.5.1"
+    resolved "https://registry.yarnpkg.com/@pixi/sprite-animated/-/sprite-animated-6.5.1.tgz#486841644d0281d69a99a1d132c40a2caea8b9fb"
+    integrity sha512-roaU01nSQtHx7302/7gueOooSsAsiSq2QVzd06SCSBIiGAg5GY5amEhkS9YHp+o97c3irimPgdcGS5/CBkSFtg==
   
   "@pixi/sprite@^6.5.1":
     version "6.5.1"
@@ -105,10 +131,40 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/@pixi/ticker/-/ticker-6.5.1.tgz#457bdfe9cb9215847702f961813c90ffc83ed268"
     integrity sha512-8iHP96YMv1EmrE3EWFYY2APfTNcwH5YOXxRH5KIPWSaqXmxYI9mOgfcDuejJJiWOXOOQTt7g2Ehz9TKAFDcESQ==
   
+  "@pixi/utils@^6.5.1":
+    version "6.5.1"
+    resolved "https://registry.yarnpkg.com/@pixi/utils/-/utils-6.5.1.tgz#fd1d96cbd37e708ae8bec75eba35f44f0a50c258"
+    integrity sha512-bmnvajwmY2cXU3NAD6cFjUk/mrrF+SVGHURpHHiBk26/EBgm5CSHpBS9s3PhSuJ0F23KGdhOJYLqu8urcWFDZA==
+    dependencies:
+      "@types/earcut" "^2.1.0"
+      earcut "^2.2.4"
+      eventemitter3 "^3.1.0"
+      url "^0.11.0"
+  
+  "@types/earcut@^2.1.0":
+    version "2.1.1"
+    resolved "https://registry.yarnpkg.com/@types/earcut/-/earcut-2.1.1.tgz#573a0af609f17005c751f6f4ffec49cfe358ea51"
+    integrity sha512-w8oigUCDjElRHRRrMvn/spybSMyX8MTkKA5Dv+tS1IE/TgmNZPqUYtvYBXGY8cieSE66gm+szeK+bnbxC2xHTQ==
+  
   "@types/offscreencanvas@^2019.6.4":
     version "2019.7.0"
     resolved "https://registry.yarnpkg.com/@types/offscreencanvas/-/offscreencanvas-2019.7.0.tgz#e4a932069db47bb3eabeb0b305502d01586fa90d"
     integrity sha512-PGcyveRIpL1XIqK8eBsmRBt76eFgtzuPiSTyKHZxnGemp2yzGzWpjYKAfK3wIMiU7eH+851yEpiuP8JZerTmWg==
+  
+  earcut@^2.2.4:
+    version "2.2.4"
+    resolved "https://registry.yarnpkg.com/earcut/-/earcut-2.2.4.tgz#6d02fd4d68160c114825d06890a92ecaae60343a"
+    integrity sha512-/pjZsA1b4RPHbeWZQn66SWS8nZZWLQQ23oE3Eam7aroEFGEvwKAsJfZ9ytiEMycfzXWpca4FA9QIOehf7PocBQ==
+  
+  eventemitter3@^3.1.0:
+    version "3.1.2"
+    resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-3.1.2.tgz#2d3d48f9c346698fce83a85d7d664e98535df6e7"
+    integrity sha512-tvtQIeLVHjDkJYnzf2dgVMxfuSGJeM/7UCG17TT4EumTfNtF+0nebF/4zWOIkCreAbtNqhGEboB6BWrwqNaw4Q==
+  
+  eventemitter3@^4.0.7:
+    version "4.0.7"
+    resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-4.0.7.tgz#2de9b68f6528d5644ef5c59526a1b4a07306169f"
+    integrity sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==
   
   gsap@^3.10.4:
     version "3.10.4"
@@ -120,7 +176,25 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/pixi/-/pixi-0.3.1.tgz#858cd6164a32a1e4b41192cdf5c6d98209300ba8"
     integrity sha512-9ngEid+Zp6WTSnHnfy3+PX/02HXhJ3RMxolpuf7H4e8cKHl9WE3lB059v0O7op55We92ILAssAWSAQHG64cYhQ==
   
+  punycode@1.3.2:
+    version "1.3.2"
+    resolved "https://registry.yarnpkg.com/punycode/-/punycode-1.3.2.tgz#9653a036fb7c1ee42342f2325cceefea3926c48d"
+    integrity sha512-RofWgt/7fL5wP1Y7fxE7/EmTLzQVnB0ycyibJ0OOHIlJqTNzglYFxVwETOcIoJqJmpDXJ9xImDv+Fq34F/d4Dw==
+  
+  querystring@0.2.0:
+    version "0.2.0"
+    resolved "https://registry.yarnpkg.com/querystring/-/querystring-0.2.0.tgz#b209849203bb25df820da756e747005878521620"
+    integrity sha512-X/xY82scca2tau62i9mDyU9K+I+djTMUsvwf7xnUX5GLvVzgJybOJf4Y6o9Zx3oJK/LSXg5tTZBjwzqVPaPO2g==
+  
   type-fest@^2.18.0:
     version "2.18.0"
     resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-2.18.0.tgz#fdef3a74e0a9e68ebe46054836650fb91ac3881e"
     integrity sha512-pRS+/yrW5TjPPHNOvxhbNZexr2bS63WjrMU8a+VzEBhUi9Tz1pZeD+vQz3ut0svZ46P+SRqMEPnJmk2XnvNzTw==
+  
+  url@^0.11.0:
+    version "0.11.0"
+    resolved "https://registry.yarnpkg.com/url/-/url-0.11.0.tgz#3838e97cfc60521eb73c525a8e55bfdd9e2e28f1"
+    integrity sha512-kbailJa29QrtXnxgq+DdCEGlbTeYM2eJUxsz6vjZavrCYPMIFHMKQmSKYAIuUK2i7hgPm28a8piX5NTUtM/LKQ==
+    dependencies:
+      punycode "1.3.2"
+      querystring "0.2.0"

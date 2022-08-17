@@ -1,8 +1,9 @@
-import { GameSingletons } from "@game/app/GameSingletons";
+
 import { Texture } from "@pixi/core";
 import { NineSlicePlane } from "@pixi/mesh-extras";
 import { TilingSprite } from "@pixi/sprite-tiling";
-import { EnchantmentGlobals } from "@sdk/pixi/enchant/EnchantmentGlobals";
+import { context } from "../../..";
+import { EnchantmentGlobals } from "../../../EnchantmentGlobals";
 
 interface CinematicConversationBackdropOptions {
   texture: Texture;
@@ -35,14 +36,14 @@ export class CinematicConversationBackdrop extends TilingSprite {
     this.skew.set(skew, 0);
     this.rotation = rotation;
 
-    const assets = GameSingletons.getResources();
+    const assets = context.assets
     const framePadding = 56;
     const frameTexture = assets.getTexture("assets/images/cinematics/story/frame.png");
     const frame = new NineSlicePlane(frameTexture, 100, 100, 100, 100);
     frame.width = width + framePadding;
     frame.height = height + framePadding;
-    frame.pivot.set(0.5 * frame.width, 0.5 * frame.height);
-    this.addChild(frame);
+   // frame.pivot.set(0.5 * frame.width, 0.5 * frame.height);
+    //this.addChild(frame);
 
     Object.assign(this, {
       onEnterFrame(this: CinematicConversationBackdrop) {
