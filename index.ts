@@ -1,15 +1,9 @@
 import { boot } from './boot';
-import { Texture } from '@pixi/core';
-import { Sprite } from '@pixi/sprite';
-import { Container, DisplayObject } from '@pixi/display';
+import { DisplayObject } from '@pixi/display';
 import gsap from 'gsap';
 import { PixiPlugin } from 'gsap/PixiPlugin';
-import type { GameContext } from "./boot";
 import { NPCEncounterCinematic } from "./cinematic-factory/cinematics/NPCEncounterCinematic";
-import { NPCEncounterCinematic_Culprit } from "./cinematic-factory/cinematics/NPCEncounterCinematic_Culprit";
 import { NPCEncounterCinematic_MysteriousStranger } from "./cinematic-factory/cinematics/NPCEncounterCinematic_MysteriousStranger";
-import { NPCEncounterCinematic_Otto } from "./cinematic-factory/cinematics/NPCEncounterCinematic_Otto";
-import { NPCEncounterCinematic_Thomas } from "./cinematic-factory/cinematics/NPCEncounterCinematic_Thomas";
 import { presentUserDialogueChoiceOptions } from "./cinematic-factory/cinematics/story/presentUserDialogueChoiceOptions";
 import { NPCEncounterCinematicData } from "./cinematic-factory/cinematics/types/NPCEncounterCinematicData";
 import { dynamicChoiceActionFunctions } from "./cinematic-factory/cinematics/utils/dynamicChoiceActionFunctions";

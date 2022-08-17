@@ -1,11 +1,8 @@
 import { Container } from "@pixi/display";
-import { app } from "..";
+import { context } from "..";
 import type { GameContext } from "../boot";
 import { NPCEncounterCinematic } from "./cinematics/NPCEncounterCinematic";
-import { NPCEncounterCinematic_Culprit } from "./cinematics/NPCEncounterCinematic_Culprit";
 import { NPCEncounterCinematic_MysteriousStranger } from "./cinematics/NPCEncounterCinematic_MysteriousStranger";
-import { NPCEncounterCinematic_Otto } from "./cinematics/NPCEncounterCinematic_Otto";
-import { NPCEncounterCinematic_Thomas } from "./cinematics/NPCEncounterCinematic_Thomas";
 import { presentUserDialogueChoiceOptions } from "./cinematics/story/presentUserDialogueChoiceOptions";
 import { NPCEncounterCinematicData } from "./cinematics/types/NPCEncounterCinematicData";
 import { dynamicChoiceActionFunctions } from "./cinematics/utils/dynamicChoiceActionFunctions";
@@ -20,7 +17,7 @@ export async function playCinematic(
 
   const _cinematic = new Container();
 
-  const cinematic = new CinematicClass(cinematicData, () => ticker.delay(0.5));
+  const cinematic = new CinematicClass(cinematicData, () => context.ticker.delay(0.5));
 
   cinematic.dynamicChoiceActionsService = dynamicChoiceActionFunctions();
   cinematic.doTheUserChoiceThing = presentUserDialogueChoiceOptions;
@@ -29,7 +26,7 @@ export async function playCinematic(
   return cinematic;
 }
 
-export async function playOttoCinematic(friendshipLevel: number, part: string) {
+/*export async function playOttoCinematic(friendshipLevel: number, part: string) {
 
   const friendLvl = friendshipLevel;
   const fulldata: NPCEncounterCinematicData = await combineOttoSlidesBasedOnFriendLevel(friendLvl, part);
@@ -118,8 +115,8 @@ export async function getFriendLvlStats(friendLvl: number) {
   }
 
   return { friendBlockSuffix, friendLevelSuffix };
-}
-
+}*/
+/*
 export async function testNPCEncounterCinematic_MysteriousStranger() {
   return await playCinematic("asset_encounter_stranger", NPCEncounterCinematic_MysteriousStranger);
 }
@@ -135,3 +132,4 @@ export async function testNPCEncounterCinematic_Otto() {
 export async function testNPCEncounterCinematic_Culprit() {
   return await playCinematic("asset_encounter_culprit", NPCEncounterCinematic_Culprit);
 }
+*/
