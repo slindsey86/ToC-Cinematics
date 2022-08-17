@@ -1,4 +1,7 @@
-import { openWikiLink } from "@game/gameplay/externals/tocWikiLink";
+export function openWikiLink() {
+  const chooChooDrawUrl = `https://wiki.trains.cards/`;
+  window.open(chooChooDrawUrl, "_blank")?.focus();
+}
 
 export function dynamicChoiceActionFunctions() {
   const dictionary: Record<string, () => void | Promise<void>> = {

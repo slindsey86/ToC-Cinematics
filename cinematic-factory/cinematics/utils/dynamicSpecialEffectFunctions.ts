@@ -1,7 +1,7 @@
-import { __createPikachu } from "@debug/special/pikachu";
+
 import { Sprite } from "@pixi/sprite";
-import { TemporaryTweeener } from "@sdk/pixi/animations/TemporaryTweener";
-import { NPCEncounterCinematic } from "@game/cinematics/NPCEncounterCinematic";
+import { TemporaryTweeener } from "../../../TemporaryTweener";
+import { NPCEncounterCinematic } from "../NPCEncounterCinematic";
 
 export const SUPER_QUICK_AND_DIRTY_GLOBAL_PARAMS_STORE = {
   ottoEncountersCount: 0,
@@ -9,26 +9,7 @@ export const SUPER_QUICK_AND_DIRTY_GLOBAL_PARAMS_STORE = {
 
 export function dynamicSpecialEffectFunctions() {
   const dictionary: Record<string, (cinematic: NPCEncounterCinematic) => () => void | Promise<void>> = {
-    pikachu: cinematic => {
-      const pikachu = __createPikachu();
-      cinematic.slideshowViewContainer.addChild(pikachu);
-
-      const viewCenter = {
-        x: cinematic.slideshowViewBounds.width * 0.5,
-        y: cinematic.slideshowViewBounds.height * 0.5,
-      };
-      pikachu.position.set(viewCenter.x, viewCenter.y);
-
-      const tweeener = new TemporaryTweeener(pikachu);
-      tweeener.fromTo(pikachu, { pixi: { scale: 0 } }, { pixi: { scale: 2 }, duration: 0.95, ease: "elastic.out" });
-
-      const clear = async () => {
-        await tweeener.to(pikachu, { pixi: { scale: 0 }, duration: 0.3, ease: "bakc.in" });
-        pikachu.destroy({ children: true });
-      };
-
-      return clear;
-    },
+   
     ampVial: cinematic => {
       const ampVial = Sprite.from("century-vials/1.png");
       cinematic.slideshowViewContainer.addChild(ampVial);

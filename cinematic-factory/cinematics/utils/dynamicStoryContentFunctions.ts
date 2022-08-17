@@ -1,18 +1,10 @@
-import { TrainEntity } from "@game/data/entities/TrainEntity";
-import { ReadonlyDeep } from "type-fest";
-import { ReadonlyObjectDeep } from "type-fest/source/readonly-deep";
+export function createDynamicStoryTextService() {
 
-export function createDynamicStoryTextService(train: ReadonlyObjectDeep<TrainEntity>) {
-  const conditionPercentage = train.conditionFraction * 100;
-  const getConductorName = () => train.conductorStats?.name ?? "Orson Brisk";
-  const getTrainName = () => train.name;
-  const getTrainCondition = () => conditionPercentage.toFixed(1).toString();
-
-  const dictionary: Record<string, () => string> = {
-    ACTIVE_CONDUCTOR: getConductorName,
-    ACTIVE_CONDUCTOR_FLAVOR_TEXT: () => ACTIVE_CONDUCTOR_FLAVOR_TEXTS_BY_NAME[getConductorName()],
-    CLAIMED_TRAIN_NAME: getTrainName,
-    CLAIMED_TRAIN_CONDITION: getTrainCondition,
+   const dictionary: Record<string, () => string> = {
+    ACTIVE_CONDUCTOR: () => "Orson Brisk",
+    ACTIVE_CONDUCTOR_FLAVOR_TEXT: () => ACTIVE_CONDUCTOR_FLAVOR_TEXTS_BY_NAME["Orson Brisk"],
+    CLAIMED_TRAIN_NAME: () => "ChoodLaw",
+    CLAIMED_TRAIN_CONDITION: () => "95",
   };
 
   const service = {
