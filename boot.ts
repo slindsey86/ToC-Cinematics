@@ -41,6 +41,7 @@ export function boot(applicationOptions: Partial<IApplicationOptions> = {}) {
     ticker,
     viewSize
   }
+  document.body.appendChild(app.view);
   
   ticker.add(() => app.render());
   ticker.start();

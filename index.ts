@@ -16,9 +16,7 @@ import { dynamicChoiceActionFunctions } from "./cinematic-factory/cinematics/uti
 import { dynamicSpecialEffectFunctions } from "./cinematic-factory/cinematics/utils/dynamicSpecialEffectFunctions";
 import { asset_encounter_stranger } from './cinematic-factory/cinematics/asset_encounter_stranger';
 
-
 export const context = boot();
-console.log("app assigned")
 PixiPlugin.registerPIXI({ DisplayObject });
 gsap.registerPlugin(PixiPlugin);
 
@@ -28,6 +26,7 @@ export async function playCinematic(
     play: (...args: any[]) => Promise<void>;
   }
 ) {
+  
   const cinematic = new CinematicClass(cinematicData, () => context.ticker.delay(0.5));
 
   cinematic.dynamicSpecialEffectsService = dynamicSpecialEffectFunctions();
@@ -44,10 +43,10 @@ export async function testNPCEncounterCinematic_MysteriousStranger() {
 }
 
 async function main() {
-  document.body.appendChild(context.app.view);
+  boot();
   console.log("booted")
   console.log("trying")
   await playCinematic(asset_encounter_stranger, NPCEncounterCinematic_MysteriousStranger);
 }
 
-await main().catch(console.error);
+main().catch(console.error);
