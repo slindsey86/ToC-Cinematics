@@ -44,7 +44,8 @@ export function boot(applicationOptions: Partial<IApplicationOptions> = {}) {
   
   ticker.add(() => app.render());
   ticker.start();
-
+  app.ticker = ticker;
+  
   return uninitializedContext;
 }
 
