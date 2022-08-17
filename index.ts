@@ -16,7 +16,9 @@ import { dynamicChoiceActionFunctions } from "./cinematic-factory/cinematics/uti
 import { dynamicSpecialEffectFunctions } from "./cinematic-factory/cinematics/utils/dynamicSpecialEffectFunctions";
 import { asset_encounter_stranger } from './cinematic-factory/cinematics/asset_encounter_stranger';
 
+
 export const app = boot();
+console.log("app assigned")
 PixiPlugin.registerPIXI({ DisplayObject });
 gsap.registerPlugin(PixiPlugin);
 
