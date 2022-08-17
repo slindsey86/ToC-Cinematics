@@ -14,7 +14,7 @@ export function boot(applicationOptions: Partial<IApplicationOptions> = {}) {
   const parentElement = document.getElementById(APP_DIV_ID) ?? document.body;
 
   const app = new Application({
-    backgroundColor: 0x0f1f2f,
+    backgroundColor: 0x000000,
     resolution: window.devicePixelRatio || 1,
     resizeTo: parentElement,
     autoDensity: true,
