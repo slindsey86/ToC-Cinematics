@@ -42,6 +42,7 @@ export async function testNPCEncounterCinematic_MysteriousStranger() {
 }
 
 async function main() {
+  console.log("trying")
   testNPCEncounterCinematic_MysteriousStranger();
 }
 
