@@ -25,7 +25,7 @@ import type {
 import { DynamicChoiceActionsService } from "./utils/dynamicChoiceActionFunctions";
 import { DynamicSpecialEffectsService } from "./utils/dynamicSpecialEffectFunctions";
 import { DynamicStoryTextService } from "./utils/dynamicStoryContentFunctions";
-import { app } from "../..";
+import { context } from "../..";
 
 import { FontFamily } from "../../FontFamily";
 import type { ITextStyle } from "@pixi/text";
@@ -53,7 +53,7 @@ const getThingPresetData = <T>(thingData: T & { preset?: string }, thingPresets?
 };
 
 export abstract class NPCEncounterCinematic extends EnchantedContainer {
-  protected readonly context: GameContext = app;
+  protected readonly context: GameContext = context;
   protected readonly tweeener = new TemporaryTweeener(this);
 
   public readonly slideshowViewBounds: Rectangle;

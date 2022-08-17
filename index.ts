@@ -17,7 +17,7 @@ import { dynamicSpecialEffectFunctions } from "./cinematic-factory/cinematics/ut
 import { asset_encounter_stranger } from './cinematic-factory/cinematics/asset_encounter_stranger';
 
 
-export const app = boot();
+export const context = boot();
 console.log("app assigned")
 PixiPlugin.registerPIXI({ DisplayObject });
 gsap.registerPlugin(PixiPlugin);
@@ -28,13 +28,13 @@ export async function playCinematic(
     play: (...args: any[]) => Promise<void>;
   }
 ) {
-  const cinematic = new CinematicClass(cinematicData, () => app.ticker.delay(0.5));
+  const cinematic = new CinematicClass(cinematicData, () => context.ticker.delay(0.5));
 
   cinematic.dynamicSpecialEffectsService = dynamicSpecialEffectFunctions();
   cinematic.dynamicChoiceActionsService = dynamicChoiceActionFunctions();
   cinematic.doTheUserChoiceThing = presentUserDialogueChoiceOptions; 
 
-  app.app.stage.addChild(cinematic);
+  context.app.stage.addChild(cinematic);
 
   await cinematic.play();
 }

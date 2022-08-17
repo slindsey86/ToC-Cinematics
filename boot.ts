@@ -12,9 +12,7 @@ import { Loader } from '@pixi/loaders';
 import { SpritesheetLoader } from '@pixi/spritesheet';
 Loader.registerPlugin(SpritesheetLoader);
 import { createTicker } from "./ticker";
-import { Ticker } from '@pixi/ticker';
 import '@pixi/math-extras';
-import { app } from '.';
 import { AssetsManager } from './assets-manager';
 import { ViewSize } from "./ViewSize"
 import { SimpleObjectsFactory } from './SimpleObjectsFactory';
