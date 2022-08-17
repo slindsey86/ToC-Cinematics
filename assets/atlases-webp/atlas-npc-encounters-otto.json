@@ -1,0 +1,135 @@
+{
+  "frames": {
+    "npc-encounters-otto/otto-normal.png": {
+      "frame": {
+        "x": 1,
+        "y": 1,
+        "w": 496,
+        "h": 1053
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 168,
+        "y": 102,
+        "w": 496,
+        "h": 1053
+      },
+      "sourceSize": {
+        "w": 852,
+        "h": 1155
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "npc-encounters-otto/name-badge.png": {
+      "frame": {
+        "x": 1,
+        "y": 1056,
+        "w": 732,
+        "h": 363
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 732,
+        "h": 363
+      },
+      "sourceSize": {
+        "w": 732,
+        "h": 363
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "npc-encounters-otto/otto-surprised.png": {
+      "frame": {
+        "x": 499,
+        "y": 1,
+        "w": 602,
+        "h": 1047
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 124,
+        "y": 108,
+        "w": 602,
+        "h": 1047
+      },
+      "sourceSize": {
+        "w": 852,
+        "h": 1155
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "npc-encounters-otto/Bubble.png": {
+      "frame": {
+        "x": 1103,
+        "y": 1,
+        "w": 776,
+        "h": 358
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 776,
+        "h": 358
+      },
+      "sourceSize": {
+        "w": 776,
+        "h": 358
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "npc-encounters-otto/otto-wonder.png": {
+      "frame": {
+        "x": 1103,
+        "y": 361,
+        "w": 508,
+        "h": 1043
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 154,
+        "y": 112,
+        "w": 508,
+        "h": 1043
+      },
+      "sourceSize": {
+        "w": 852,
+        "h": 1155
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://github.com/odrick/free-tex-packer-core",
+    "version": "0.3.4",
+    "image": "atlas-npc-encounters-otto.webp",
+    "format": "RGBA8888",
+    "size": {
+      "w": 2048,
+      "h": 2048
+    },
+    "scale": 1
+  }
+}

@@ -1,0 +1,279 @@
+{
+  "frames": {
+    "npc-encounters-thomas/tom-hello.png": {
+      "frame": {
+        "x": 1,
+        "y": 1,
+        "w": 764,
+        "h": 1063
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 92,
+        "w": 764,
+        "h": 1063
+      },
+      "sourceSize": {
+        "w": 852,
+        "h": 1155
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "npc-encounters-thomas/tom-claim.png": {
+      "frame": {
+        "x": 767,
+        "y": 1,
+        "w": 529,
+        "h": 1001
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 158,
+        "y": 154,
+        "w": 529,
+        "h": 1001
+      },
+      "sourceSize": {
+        "w": 852,
+        "h": 1155
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "npc-encounters-thomas/bubble-1.png": {
+      "frame": {
+        "x": 1770,
+        "y": 1,
+        "w": 554,
+        "h": 236
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 554,
+        "h": 236
+      },
+      "sourceSize": {
+        "w": 554,
+        "h": 236
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "npc-encounters-thomas/tom-well.png": {
+      "frame": {
+        "x": 767,
+        "y": 532,
+        "w": 664,
+        "h": 992
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 115,
+        "y": 163,
+        "w": 664,
+        "h": 992
+      },
+      "sourceSize": {
+        "w": 852,
+        "h": 1155
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "npc-encounters-thomas/name-badge.png": {
+      "frame": {
+        "x": 1761,
+        "y": 557,
+        "w": 366,
+        "h": 182
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 366,
+        "h": 182
+      },
+      "sourceSize": {
+        "w": 366,
+        "h": 182
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "npc-encounters-thomas/Thomas-promo-1.png": {
+      "frame": {
+        "x": 1,
+        "y": 1066,
+        "w": 375,
+        "h": 525
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 375,
+        "h": 525
+      },
+      "sourceSize": {
+        "w": 375,
+        "h": 525
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "npc-encounters-thomas/tom-think.png": {
+      "frame": {
+        "x": 1,
+        "y": 1443,
+        "w": 566,
+        "h": 989
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 195,
+        "y": 166,
+        "w": 566,
+        "h": 989
+      },
+      "sourceSize": {
+        "w": 852,
+        "h": 1155
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "npc-encounters-thomas/Thomas-promo-2.png": {
+      "frame": {
+        "x": 992,
+        "y": 1198,
+        "w": 375,
+        "h": 525
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 375,
+        "h": 525
+      },
+      "sourceSize": {
+        "w": 375,
+        "h": 525
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "npc-encounters-thomas/bubble-3.png": {
+      "frame": {
+        "x": 992,
+        "y": 1725,
+        "w": 390,
+        "h": 318
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 318
+      },
+      "sourceSize": {
+        "w": 390,
+        "h": 318
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "npc-encounters-thomas/Thomas-promo-3.png": {
+      "frame": {
+        "x": 1369,
+        "y": 1198,
+        "w": 375,
+        "h": 525
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 375,
+        "h": 525
+      },
+      "sourceSize": {
+        "w": 375,
+        "h": 525
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "npc-encounters-thomas/bubble-2.png": {
+      "frame": {
+        "x": 1746,
+        "y": 1198,
+        "w": 412,
+        "h": 300
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 412,
+        "h": 300
+      },
+      "sourceSize": {
+        "w": 412,
+        "h": 300
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://github.com/odrick/free-tex-packer-core",
+    "version": "0.3.4",
+    "image": "atlas-npc-encounters-thomas.webp",
+    "format": "RGBA8888",
+    "size": {
+      "w": 2048,
+      "h": 2048
+    },
+    "scale": 1
+  }
+}

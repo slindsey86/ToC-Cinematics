@@ -1,0 +1,111 @@
+{
+  "frames": {
+    "npc-encounters-the-culprit/culprit-2.png": {
+      "frame": {
+        "x": 1,
+        "y": 1,
+        "w": 669,
+        "h": 995
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 70,
+        "y": 17,
+        "w": 669,
+        "h": 995
+      },
+      "sourceSize": {
+        "w": 880,
+        "h": 1012
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "npc-encounters-the-culprit/culprit-1.png": {
+      "frame": {
+        "x": 1,
+        "y": 998,
+        "w": 779,
+        "h": 979
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 57,
+        "y": 33,
+        "w": 779,
+        "h": 979
+      },
+      "sourceSize": {
+        "w": 880,
+        "h": 1012
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "npc-encounters-the-culprit/bubble.png": {
+      "frame": {
+        "x": 672,
+        "y": 1,
+        "w": 548,
+        "h": 196
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 548,
+        "h": 196
+      },
+      "sourceSize": {
+        "w": 548,
+        "h": 196
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "npc-encounters-the-culprit/name-badge.png": {
+      "frame": {
+        "x": 672,
+        "y": 551,
+        "w": 370,
+        "h": 166
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 370,
+        "h": 166
+      },
+      "sourceSize": {
+        "w": 370,
+        "h": 166
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://github.com/odrick/free-tex-packer-core",
+    "version": "0.3.4",
+    "image": "atlas-npc-encounters-the-culprit.webp",
+    "format": "RGBA8888",
+    "size": {
+      "w": 1024,
+      "h": 2048
+    },
+    "scale": 1
+  }
+}

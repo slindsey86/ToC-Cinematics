@@ -1,0 +1,255 @@
+{
+  "frames": {
+    "npc-encounters-mysterious-stranger/ms3.png": {
+      "frame": {
+        "x": 1,
+        "y": 1,
+        "w": 504,
+        "h": 874
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 101,
+        "y": 50,
+        "w": 504,
+        "h": 874
+      },
+      "sourceSize": {
+        "w": 682,
+        "h": 924
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "npc-encounters-mysterious-stranger/ms4.png": {
+      "frame": {
+        "x": 1,
+        "y": 877,
+        "w": 433,
+        "h": 869
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 100,
+        "y": 55,
+        "w": 433,
+        "h": 869
+      },
+      "sourceSize": {
+        "w": 682,
+        "h": 924
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "npc-encounters-mysterious-stranger/name-badge.png": {
+      "frame": {
+        "x": 1,
+        "y": 1748,
+        "w": 400,
+        "h": 216
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 400,
+        "h": 216
+      },
+      "sourceSize": {
+        "w": 400,
+        "h": 216
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "npc-encounters-mysterious-stranger/ms-bubble-4.png": {
+      "frame": {
+        "x": 1,
+        "y": 1966,
+        "w": 426,
+        "h": 81
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 426,
+        "h": 81
+      },
+      "sourceSize": {
+        "w": 426,
+        "h": 81
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "npc-encounters-mysterious-stranger/ms-bubble-2.png": {
+      "frame": {
+        "x": 403,
+        "y": 1748,
+        "w": 449,
+        "h": 152
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 449,
+        "h": 152
+      },
+      "sourceSize": {
+        "w": 449,
+        "h": 152
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "npc-encounters-mysterious-stranger/ms1.png": {
+      "frame": {
+        "x": 436,
+        "y": 877,
+        "w": 460,
+        "h": 861
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 93,
+        "y": 63,
+        "w": 460,
+        "h": 861
+      },
+      "sourceSize": {
+        "w": 682,
+        "h": 924
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "npc-encounters-mysterious-stranger/ms-bubble-1.png": {
+      "frame": {
+        "x": 429,
+        "y": 1902,
+        "w": 443,
+        "h": 134
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 443,
+        "h": 134
+      },
+      "sourceSize": {
+        "w": 443,
+        "h": 134
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "npc-encounters-mysterious-stranger/ms-bubble-3.png": {
+      "frame": {
+        "x": 854,
+        "y": 1740,
+        "w": 336,
+        "h": 151
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 336,
+        "h": 151
+      },
+      "sourceSize": {
+        "w": 336,
+        "h": 151
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "npc-encounters-mysterious-stranger/ms5.png": {
+      "frame": {
+        "x": 507,
+        "y": 1,
+        "w": 370,
+        "h": 857
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 140,
+        "y": 67,
+        "w": 370,
+        "h": 857
+      },
+      "sourceSize": {
+        "w": 682,
+        "h": 924
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "npc-encounters-mysterious-stranger/ms2.png": {
+      "frame": {
+        "x": 879,
+        "y": 1,
+        "w": 441,
+        "h": 856
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 108,
+        "y": 68,
+        "w": 441,
+        "h": 856
+      },
+      "sourceSize": {
+        "w": 682,
+        "h": 924
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://github.com/odrick/free-tex-packer-core",
+    "version": "0.3.4",
+    "image": "atlas-npc-encounters-mysterious-stranger.webp",
+    "format": "RGBA8888",
+    "size": {
+      "w": 2048,
+      "h": 2048
+    },
+    "scale": 1
+  }
+}

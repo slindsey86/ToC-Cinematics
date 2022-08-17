@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\mindw\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add @pixi/*
+  C:\Program Files\nodejs\node.exe C:\Users\mindw\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add eventemmitter3
 
 PATH: 
   C:\Python310\Scripts\;C:\Python310\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Oculus\Support\oculus-runtime;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Filestar;C:\Program Files (x86)\Calibre2\;C:\Program Files\dotnet\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\Git LFS;C:\Program Files\PuTTY\;C:\Users\mindw\AppData\Local\Microsoft\WindowsApps;C:\Users\mindw\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\mindw\AppData\Roaming\npm;C:\Users\mindw\AppData\Local\Programs\mongosh\;C:\Program Files\heroku\bin;C:\Program Files\git\bin;C:\Program Files\git\cmd;C:\Program Files (x86)\GitHub CLI\;C:\Users\mindw\AppData\Local\GitHubDesktop\bin;C:\Program Files (x86)\BrowserStackLocal\
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@pixi%2f*: Not found
+  Error: https://registry.yarnpkg.com/eventemmitter3: Not found
       at Request.params.callback [as _callback] (C:\Users\mindw\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:67029:18)
       at Request.self.callback (C:\Users\mindw\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140883:22)
       at Request.emit (events.js:400:28)
@@ -30,15 +30,18 @@ npm manifest:
   {
     "dependencies": {
       "@pixi/app": "^6.5.1",
+      "@pixi/constants": "^6.5.1",
       "@pixi/core": "^6.5.1",
       "@pixi/display": "^6.5.1",
       "@pixi/interaction": "^6.5.1",
       "@pixi/loaders": "^6.5.1",
       "@pixi/sprite": "^6.5.1",
       "@pixi/spritesheet": "^6.5.1",
+      "@pixi/text": "^6.5.1",
       "@pixi/ticker": "^6.5.1",
       "gsap": "^3.10.4",
-      "pixi": "^0.3.1"
+      "pixi": "^0.3.1",
+      "type-fest": "^2.18.0"
     }
   }
 
@@ -54,6 +57,11 @@ Lockfile:
     version "6.5.1"
     resolved "https://registry.yarnpkg.com/@pixi/app/-/app-6.5.1.tgz#d673fb946adc01cf6390fee9172577f1ab78e98b"
     integrity sha512-JBD5T21S2N8CVR2dXuvWzMFRNO24rbMa15qGekcItuCpw7VWe1oxEPxquxsbKlBL2Zanr+J69wW8ZIQd8yQAGA==
+  
+  "@pixi/constants@^6.5.1":
+    version "6.5.1"
+    resolved "https://registry.yarnpkg.com/@pixi/constants/-/constants-6.5.1.tgz#a1ab02f94d0dd00fbc47d5384cce30994f014560"
+    integrity sha512-xhiCvpGtWlEKEuxRjygnjtfkOxW/FFDpJpwYjygfNr2WL+K6r8dfLl5VB89Au1dtp+akRqBo9AqO5gEZ0TaXzA==
   
   "@pixi/core@^6.5.1":
     version "6.5.1"
@@ -87,6 +95,11 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/@pixi/spritesheet/-/spritesheet-6.5.1.tgz#6a183a8137078bb84e3a64d648ee17ef559fc416"
     integrity sha512-5hbGCvSPBEYYbD1h2kL6U4kbWc+QLOJfiEnNxTGay2uawDSU4TixhblqZJyIR9b99RuhNAhrvM7Ii1cR0Is4Yw==
   
+  "@pixi/text@^6.5.1":
+    version "6.5.1"
+    resolved "https://registry.yarnpkg.com/@pixi/text/-/text-6.5.1.tgz#df29fa7427c0cea34b19f4fa7c5c0857f80bc224"
+    integrity sha512-vryWN5LIHqxApOnHF2ggZ8VIQcPh9mULyeQKoWMhzCp8dvlGp246W9Qwc+/FehestLk2qIWbY3Mtp+P4hYm+5w==
+  
   "@pixi/ticker@^6.5.1":
     version "6.5.1"
     resolved "https://registry.yarnpkg.com/@pixi/ticker/-/ticker-6.5.1.tgz#457bdfe9cb9215847702f961813c90ffc83ed268"
@@ -106,3 +119,8 @@ Lockfile:
     version "0.3.1"
     resolved "https://registry.yarnpkg.com/pixi/-/pixi-0.3.1.tgz#858cd6164a32a1e4b41192cdf5c6d98209300ba8"
     integrity sha512-9ngEid+Zp6WTSnHnfy3+PX/02HXhJ3RMxolpuf7H4e8cKHl9WE3lB059v0O7op55We92ILAssAWSAQHG64cYhQ==
+  
+  type-fest@^2.18.0:
+    version "2.18.0"
+    resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-2.18.0.tgz#fdef3a74e0a9e68ebe46054836650fb91ac3881e"
+    integrity sha512-pRS+/yrW5TjPPHNOvxhbNZexr2bS63WjrMU8a+VzEBhUi9Tz1pZeD+vQz3ut0svZ46P+SRqMEPnJmk2XnvNzTw==
