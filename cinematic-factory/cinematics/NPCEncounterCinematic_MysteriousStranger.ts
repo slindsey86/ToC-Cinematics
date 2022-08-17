@@ -1,22 +1,19 @@
-import { MusicSource } from "@game/constants/paths/MusicSource";
-import { TilingSpriteDimmer, TilingSpriteDimmerTemplates } from "@game/ui/common/TilingSpriteDimmer";
-import { Texture } from "@pixi/core";
-import { Sprite } from "@pixi/sprite";
-import { CallbackList } from "@sdk/utils/callbacks/CallbackList";
-import { applyPreNPCEncounterScreenEffect, npcEncoutnerScreenEffects } from "./applyPreNPCEncounterScreenEffect";
-import { NPCEncounterCinematic } from "./NPCEncounterCinematic";
-import { NPCEncounterReward } from "./NPCEncounterReward";
+import { MusicSource } from '@game/constants/paths/MusicSource';
+import {
+  TilingSpriteDimmer,
+  TilingSpriteDimmerTemplates,
+} from '@game/ui/common/TilingSpriteDimmer';
+import { Texture } from '@pixi/core';
+import { Sprite } from '@pixi/sprite';
+import { CallbackList } from '@sdk/utils/callbacks/CallbackList';
+import { NPCEncounterCinematic } from './NPCEncounterCinematic';
+import { NPCEncounterReward } from './NPCEncounterReward';
 
 export class NPCEncounterCinematic_MysteriousStranger extends NPCEncounterCinematic {
   private vortexTween!: any;
 
   async playIntroAnimation() {
     const { app, world, ticker } = this.context;
-
-    await npcEncoutnerScreenEffects.applyFastGlitch(world, 0.033);
-    await ticker.delay(0.8);
-    await npcEncoutnerScreenEffects.applyFastGlitch(world, 0.15);
-    await ticker.delay(0.8);
   }
 
   async play(reward: NPCEncounterReward) {
@@ -54,7 +51,9 @@ export class NPCEncounterCinematic_MysteriousStranger extends NPCEncounterCinema
      */
     await ticker.delay(0.3);
 
-    const stopHidingTheCogWheelMenu = main.hud.reasonsToHideCogWheelMenu.add("OngoingNPCCinematic");
+    const stopHidingTheCogWheelMenu = main.hud.reasonsToHideCogWheelMenu.add(
+      'OngoingNPCCinematic'
+    );
     cleanUpCallbacks.push(stopHidingTheCogWheelMenu);
 
     try {
@@ -68,11 +67,16 @@ export class NPCEncounterCinematic_MysteriousStranger extends NPCEncounterCinema
        * spinner.showDuring() shows the loading spinner while the given async function is running.
        */
       const textures = await spinner.showDuring(
-        this.enchantments.waitUntil.orThrowError(() => this.textures || this.texturesError),
+        this.enchantments.waitUntil.orThrowError(
+          () => this.textures || this.texturesError
+        ),
         `Loading textures for NPC encounter cinematic...`
       );
 
-      const characterMusicTrack = music.playTrack(MusicSource.NPCEncounterStranger, true);
+      const characterMusicTrack = music.playTrack(
+        MusicSource.NPCEncounterStranger,
+        true
+      );
       cleanUpCallbacks.push(characterMusicTrack.stop);
 
       await this.playIntroAnimation();
@@ -82,13 +86,14 @@ export class NPCEncounterCinematic_MysteriousStranger extends NPCEncounterCinema
       await ticker.delay(0.9);
 
       const flashes = this.addFlashQuad();
-      await applyPreNPCEncounterScreenEffect(app.stage);
       flashes.destroy();
 
       await ticker.delay(0.1);
 
       // ,,, add the vortex effect
-      const vortex = this.addCinematicBackdrop(textures[this.data.background.texture]);
+      const vortex = this.addCinematicBackdrop(
+        textures[this.data.background.texture]
+      );
       vortex.position.copyFrom(this.data.background);
       vortex.scale.set(this.data.background.scale);
 
@@ -98,7 +103,7 @@ export class NPCEncounterCinematic_MysteriousStranger extends NPCEncounterCinema
         this.tweeener.from(vortex, {
           pixi: { scale: vortex.scale.x * 1.2, alpha: 0 },
           duration: 0.7,
-          overwrite: "auto",
+          overwrite: 'auto',
         }),
       ]);
 
@@ -106,7 +111,7 @@ export class NPCEncounterCinematic_MysteriousStranger extends NPCEncounterCinema
 
       const showRewardsModal = async () => {
         const { modal, promise } =
-          reward.type === "TOCIUM"
+          reward.type === 'TOCIUM'
             ? this.context.modals.strangerReward_Tocium(reward)
             : this.context.modals.strangerReward_CenturyVial(reward.amount);
 
@@ -116,7 +121,10 @@ export class NPCEncounterCinematic_MysteriousStranger extends NPCEncounterCinema
          */
         this.slideshowViewContainer.addChildAt(modal, 1);
         modal.scale.set(1.15);
-        modal.position.set(this.slideshowViewBounds.width / 2, this.slideshowViewBounds.height / 2);
+        modal.position.set(
+          this.slideshowViewBounds.width / 2,
+          this.slideshowViewBounds.height / 2
+        );
 
         await promise;
 
@@ -128,15 +136,18 @@ export class NPCEncounterCinematic_MysteriousStranger extends NPCEncounterCinema
       await this.tweeener.to(vortex, {
         pixi: { scale: vortex.scale.x * 1.05, alpha: 0 },
         duration: 0.7,
-        ease: "power.in",
-        overwrite: "auto",
+        ease: 'power.in',
+        overwrite: 'auto',
         onComplete: () => {
           this.vortexTween.kill();
           vortex.destroy();
         },
       });
     } catch (error) {
-      await this.context.modals.warning("" + error, "Failed to play NPC Encounter.");
+      await this.context.modals.warning(
+        '' + error,
+        'Failed to play NPC Encounter.'
+      );
     } finally {
       await dimmer.hide();
 
@@ -172,7 +183,7 @@ export class NPCEncounterCinematic_MysteriousStranger extends NPCEncounterCinema
       rotation: -6.28319,
       repeat: -1,
       duration: 100,
-      ease: "none",
+      ease: 'none',
     });
     return sprite;
   }
