@@ -43,13 +43,12 @@ export function boot(applicationOptions: Partial<IApplicationOptions> = {}) {
     ticker,
     viewSize
   }
-
-  parentElement.appendChild(app.view);
-
   
   ticker.add(() => app.render());
   ticker.start();
-console.log("booted")
+
+  document.body.appendChild(app.view);
+
   return uninitializedContext;
 }
 
