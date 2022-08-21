@@ -5,7 +5,6 @@ import { TextureCache } from "@pixi/utils";
 import { LiteralUnion } from "type-fest/source/literal-union";
 import { populateAlternativeTextureCacheIds } from "./populateAlternativeTextureCacheIds";
 
-
 const PREFIX_ATLAS = "./assets/atlases-webp/";
 const PREFIX_IMG = "./assets/images-webp/";
 
@@ -77,8 +76,8 @@ export class AssetsManager {
         Object.assign(this.resources, loader.resources);
         //// Update asset maps with references loaded textures
         for (const [key, resource] of Object.entries(loader.resources)) {
-          if (resource.textures) {
-            Object.assign(this.textures, resource.textures);
+          if (resource.texture) {
+            Object.assign(this.textures, resource.texture);
           } else if (resource.texture) {
             this.textures[key] = resource.texture;
           }
@@ -122,7 +121,7 @@ export class AssetsManager {
    */
   getTextures(input: string[] | string) {
     if (typeof input == "string") {
-      const resourceTextureMap = this.resources[input].textures;
+      const resourceTextureMap = this.resources[input].texture;
       return resourceTextureMap
         ? [...Object.values(resourceTextureMap)].sort(compareTexturesByFirstCacheId)
         : [this.getTexture(input)];
