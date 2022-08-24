@@ -5,12 +5,12 @@ import { EnchantmentGlobals } from "./EnchantmentGlobals";
 
 export const TilingSpriteDimmerTemplates = {
   STRIPES: {
-    textureId: "assets/images/ui-tiling/stripes.png",
+    textureId: "assets/images/stripes.png",
     tint: 0x060606,
     tileScale: 1.0,
   },
   SCANLINES: {
-    textureId: "assets/images/ui-tiling/scanlines.png",
+    textureId: "assets/images/scanlines.png",
     tint: 0x131313,
     tileScale: 0.456789,
   },
